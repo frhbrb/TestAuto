@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 
 public class mouseOver {
 
@@ -19,11 +20,20 @@ public class mouseOver {
 		
 		WebElement menu ;
 		menu = driver.findElement(By.xpath("//*[@id=\"nav\"]/li[2]/a"));
+		String txt = menu.getText();
+		Assert.assertEquals(txt, "Main Item 2") ;
+		System.out.println("menu txt ok");
+		
 		Actions action = new Actions(driver);
 		action.moveToElement(menu).perform();
 		
 		WebElement sub ;
 		sub = driver.findElement(By.xpath("//*[@id=\"nav\"]/li[2]/ul/li[3]/a"));
+		String textsub = sub.getText();
+		Assert.assertEquals(textsub, "SUB SUB LIST »");
+		System.out.println("sub text ok");
+		
+		
 		action.moveToElement(sub).perform();
 		System.out.println("test ok");
 		driver.close();	
