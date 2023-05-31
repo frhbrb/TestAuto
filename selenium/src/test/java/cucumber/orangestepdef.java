@@ -19,7 +19,7 @@ public class orangestepdef   {
 		System.setProperty("webdriver.chrome.driver", "src/test/ressources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	@Given("saisir lurl {string}")
