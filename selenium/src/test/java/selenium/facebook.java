@@ -38,9 +38,9 @@ public class facebook {
 		mailconf = driver.findElement(By.xpath("//input[@name='reg_email_confirmation__']"));
 		mailconf.sendKeys("valenza85628horchak@fakemail.io");
 		
-		WebElement pasword ;
-		pasword = driver.findElement(By.name("reg_passwd__"));
-		pasword.sendKeys("159753azerty");
+		WebElement password ;
+		password = driver.findElement(By.name("reg_passwd__"));
+		password.sendKeys("159753azerty");
 		
 		WebElement birthday ;
 		birthday = driver.findElement(By.name("birthday_day"));
